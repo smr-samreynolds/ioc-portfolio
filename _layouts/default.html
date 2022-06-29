@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-</head>
+
 
 <body>
-    <header>
+    <header class="grid">
     <!-- Put your header code in here -->
-    <div class="grid-middle">
-        <div class="col-4_xs-12">
+        <div class="col-8_sm-12-middle left padded-0 sm-text-center">    
             <h1>The Design Collective.</h1>
         </div>
-        <nav class="col-6_sm-12">
-            <a href="/why-us.html">Why Us</a>
-            <a href="/services.html">Services</a>
-            <a href="/projects.html">Projects</a>
-            <a href="/contact.html">Contact</a>
-        </nav>
-    </div>  
+        <nav class="col-4_sm-12-middle right padded-0 sm-text-center">
+            <a href="#why-us">Why Us</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav> 
     </header>
 
        {{content}}   
 
-    <footer>
-        <!-- put your footer code in here -->
+    <footer class="grid-middle padded padded-b-0">
+        <div class="col-6_sm-12 padded">
+            <h2>The Design Collective.</h2>
+            <h4>Web Design & Development</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eum. Ea, mollitia praesentium voluptatum sit ad aut maxime sed vel ab fuga accusamus modi, nam velit, in labore ducimus pariatur!</p>
+        </div>
+        <div class="col-6_sm-12-bottom padded right">
+            <h4>Let's Connect</h4>
+            <nav>
+                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </nav>
+        </div>
+        <div class="col-12 center padded-t-1 padded-b-1"> 
+            <p>Copyright 2022</p>
+        </div>   
     </footer>
 </body>
 </html>
