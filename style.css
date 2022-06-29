@@ -1,0 +1,15 @@
+/* Variables */
+
+:root {
+    --featured: # ;
+    --dark: # ;
+    /* --serif: font-family: 'Martel', serif; */
+    /* --heading: font-family: 'Didot', Georgia, serif; */
+}
+
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
