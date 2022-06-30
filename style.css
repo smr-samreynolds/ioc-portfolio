@@ -7,7 +7,7 @@
     --sans-serif: 'Source Sans Pro', sans-serif;
     --dark-text: #333333;
     --featured-text: #a2745c;
-    --light-text: #d3b4a2; 
+    --light-text: white; 
 }
 
 
@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 
-img { max-width: 100%;}
+img { max-width: 100%; height: auto;}
 
 /* Override default gridlex padding */ 
 [class*=col] { padding: 0; }
@@ -111,9 +111,10 @@ section { position: relative; }
 
 
 /* Background & Background Images ---------- */
-/* .bg-dark
-.bg-featured
-.bg-medium
+.bg-dark { background-color: var(--bg-dark);}
+.bg-featured { background-color: var(--bg-featured); }
+.bg-accent { background-color: var(--bg-accent);}
+/* .bg-medium
 .bg-light
 .bg-v-light */
 
@@ -130,6 +131,14 @@ section { position: relative; }
     background-position: 60% 43%;
 }
 
+.bg-meeting {
+    background-image: url('/images/meeting.jpg');
+}
+
+.bg-plant2 { 
+    background-image: url('/images/plant-2.jpg');
+    background-position: 50% 53%;
+}
 
 /* Background Overlays */
 
@@ -209,7 +218,7 @@ p, li {
   line-height: 1.4; 
   margin-bottom: 1rem;
   font-family: var(--sans-serif); 
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1rem;
 }
 
@@ -225,8 +234,8 @@ p:last-child {
 
 /* Unique Typography Styles  */
 .emphasis       { font-size: 1.2rem; }
-.text-featured  { color: var(--featured-text);}
-.text-light     { color: var(--light-text);}
+.featured-text  { color: var(--featured-text);}
+.light-text     { color: var(--light-text);}
 .subtle         { opacity: 0.8;     }
 .subtitle       { font-size: 0.8rem; }
 
@@ -468,4 +477,20 @@ footer a:hover {
       font-weight: 300;
       font-family: var(--sans-serif); 
     }
+}
+
+/* Include and section styles */
+
+/* Newsletter include */
+.right-arrow {
+    max-width: 2rem;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+}
+
+/* Icon Grid */
+.icon-section img {
+    max-width: 3rem;
+    opacity: 0.8;
+    padding: 1.5rem 0;
 }
