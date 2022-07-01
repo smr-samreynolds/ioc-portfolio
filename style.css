@@ -304,6 +304,7 @@ header {
     padding: 1rem 5%;
 }
 
+header a,
 nav a {
     padding: 0.25rem 0.5rem;
     display: inline-block;
@@ -514,8 +515,13 @@ footer a:hover {
       z-index: 2;
       position: relative;
   }
-  .banner {
-    color: white;
+  .banner-sm {
+      background-image: url('/images/plant.jpg'); 
+      background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;
+      background-position: 60% 43%;
+      color: white;
   }
 }
 
