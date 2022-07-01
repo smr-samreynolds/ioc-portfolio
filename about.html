@@ -20,11 +20,11 @@ title: About
 
 <!-- Banner Section -->
 <section class="grid tall-60 bg-featured">
-    <div class="col-5-middle padded">
+    <div class="col-5_sm-12-middle padded">
         <h2>Meet our growing family</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, autem. Quo nesciunt blanditiis officia necessitatibus cumque perspiciatis.</p>
     </div>
-    <div class="col-7 bg-image bg-plant" style="background-image:url('{{page.banner_image}}')">
+    <div class="col-7_sm-12 bg-image bg-plant" style="background-image:url('{{page.banner_image}}')">
     </div>
 </section>
 
@@ -34,10 +34,10 @@ title: About
         {% for person in page.team %}
 
         <div class="grid flex-flip-alternate">
-            <div class="col-5 padded-2">
+            <div class="col-5_sm-12 padded-2">
                 <img src="{{person.profile_image}}" class="profile-image" alt="">
             </div>
-            <div class="col-7-middle padded-1">
+            <div class="col-7_sm-12-middle padded-1 sm-text-center">
                 <h3>Meet {{person.name}}</h3>
                 <p><strong>{{person.bio}}</strong></p>
                 <p>{{person.description}}</p>
