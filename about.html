@@ -1,0 +1,57 @@
+---
+layout: default
+banner_image: /images/plant.jpg
+team:
+- name: Greg
+  bio: Big Boss Coder
+  description: Molestiae id laborum, quisquam eum rerum cumque sequi provident unde harum aut omnis cupiditate saepe expedita deleniti, necessitatibus nobis doloremque nisi consequatur.
+  profile_image: /images/profile-1.jpg
+- name: Jane
+  bio: Big Boss Designer
+  description: Obcaecati velit excepturi veritatis? Dolore corrupti esse maxime quasi ipsam dignissimos porro, odit odio repellat perferendis molestias enim iure tempora ullam quo.
+  profile_image: /images/profile-3.jpg
+- name: Johnny
+  bio: Customer Service Exec
+  description: Sunt quidem eligendi eum nam quis pariatur, officiis unde optio soluta, esse adipisci, praesentium quod aspernatur ipsam deleniti dicta eveniet. 
+  profile_image: /images/profile-2.jpg
+about-video-id: GiTLCqT8pL4
+title: About
+---
+
+<!-- Banner Section -->
+<section class="grid tall-60 bg-featured">
+    <div class="col-5-middle padded">
+        <h2>Meet our growing family</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, autem. Quo nesciunt blanditiis officia necessitatibus cumque perspiciatis.</p>
+    </div>
+    <div class="col-7 bg-image bg-plant" style="background-image:url('{{page.banner_image}}')">
+    </div>
+</section>
+
+<!-- Team section -->
+<section class="padded">
+    <div class="capped-width">
+        {% for person in page.team %}
+
+        <div class="grid flex-flip-alternate">
+            <div class="col-5 padded-2">
+                <img src="{{person.profile_image}}" class="profile-image" alt="">
+            </div>
+            <div class="col-7-middle padded-1">
+                <h3>Meet {{person.name}}</h3>
+                <p><strong>{{person.bio}}</strong></p>
+                <p>{{person.description}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Meet the team video -->
+<section class="bg-featured padded center">
+    <h2>Watch our meet the team video</h2>
+    <p class="emphasis">Featuring j-bomb the terrier</p>
+    <div class="padded-1">
+        <div class="embed-container"><iframe width="420" height="315" src="https://www.youtube.com/embed/{{page.about-video-id}}" frameborder="0" allowfullscreen></iframe></div>
+    </div>
+</section>

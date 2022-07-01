@@ -35,7 +35,9 @@ section { position: relative; }
 .capped-width-narrow    { max-width: 1000px; margin: auto; }
 .capped-width-v-narrow  { max-width: 800px;  margin: auto; }
 
-
+flip-flex-alternate:nth-child(even) {
+  flex-direction: row-reverse;
+}
 /* Container Height ---------- */
 
 .tall-100 { min-height: 100vh; }
@@ -172,6 +174,20 @@ section { position: relative; }
     background-color: var(--featured);
     opacity: 0.5;
 }
+
+.profile-image {
+  border-radius: 100%
+}
+
+/* Responsive video */
+.embed-container {
+  position: relative;
+  padding-bottom: 20%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
 
 /* Aspect Ratios */
 
@@ -467,9 +483,7 @@ footer a:hover {
   .sm-portrait      { padding-bottom: 125%; }
   .sm-square        { padding-bottom: 100%; }
 
-  .flex-flip-alternate:nth-child(even) {
-    flex-direction: row-reverse;
-  }
+  
 }
 
 /* ------- XS Media Query (36em / 576px) --------------- */ 
@@ -503,7 +517,6 @@ footer a:hover {
   .banner {
     color: white;
   }
-  .flex-flip-sm { flex-direction: column-reverse; }
 }
 
 /* Include and section styles */
@@ -520,4 +533,9 @@ footer a:hover {
     max-width: 3rem;
     opacity: 0.8;
     padding: 1.5rem 0;
+}
+
+/* Recent Projects */
+.flex-flip-alternate:nth-child(even) {
+  flex-direction: row-reverse;
 }
