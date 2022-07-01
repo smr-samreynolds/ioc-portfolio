@@ -126,8 +126,11 @@ section { position: relative; }
     background-image: url('https://source.unsplash.com/8Ogfqvw15Rg/1600x1600');
 }
 
-.bg-plant { 
+.banner { 
     background-image: url('/images/plant.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
     background-position: 60% 43%;
 }
 
@@ -141,8 +144,7 @@ section { position: relative; }
 }
 
 /* Background Overlays */
-
-.bg-overlay::after {
+/* .bg-overlay::after {
     z-index: 1;
     content: ""; 
     position: absolute;
@@ -157,8 +159,10 @@ section { position: relative; }
 .bg-overlay > * {
     z-index: 2;
     position: relative;
-}
-  /* Add a second class to change the color or style  */
+} */
+
+
+/* Add a second class to change the color or style  */
   
 .bg-overlay-gradient::after { 
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
@@ -411,7 +415,7 @@ footer a:hover {
 
 
 
-/* ------------ Responsive Styles ----------------------- */
+/* Responsive Styles ----------------------- */
 
 /* General CSS Responsive Styles (Apply everywhere unless overriden) */ 
 
@@ -463,6 +467,9 @@ footer a:hover {
   .sm-portrait      { padding-bottom: 125%; }
   .sm-square        { padding-bottom: 100%; }
 
+  .flex-flip-alternate:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 }
 
 /* ------- XS Media Query (36em / 576px) --------------- */ 
@@ -477,6 +484,26 @@ footer a:hover {
       font-weight: 300;
       font-family: var(--sans-serif); 
     }
+    .bg-overlay::after {
+      z-index: 1;
+      content: ""; 
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+  }
+    
+    
+  .bg-overlay > * {
+      z-index: 2;
+      position: relative;
+  }
+  .banner {
+    color: white;
+  }
+  .flex-flip-sm { flex-direction: column-reverse; }
 }
 
 /* Include and section styles */
